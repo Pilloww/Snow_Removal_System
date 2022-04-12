@@ -23,7 +23,7 @@ def on_request(ch, method, props, body):
     
     n = body.decode()
     nput = n.split(', ')
-    if(weather('Toronto', 'CA').weather == "Clouds"):
+    if(weather('Toronto', 'CA').weather == "Snow"):
         if(nput[0] == 'driver'):
             print("[.] Received requests from 'driver'")
             response = dicts[0][nput[1]]
