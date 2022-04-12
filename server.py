@@ -13,14 +13,6 @@ channel.queue_declare(queue='rpc_queue')
 dicts = utility.create_dictionaries()
 def on_request(ch, method, props, body):
     
-    # nput = ["",""]
-    # n = str(body)
-
-    # nput = n.split(', ')
-    # current_weather = weather("Toronto", "CA")
-    
-    # response = current_weather.toString()
-    
     n = body.decode()
     nput = n.split(', ')
     if(weather('Toronto', 'CA').weather == "Snow"):
